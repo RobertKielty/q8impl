@@ -7,7 +7,8 @@ import java.util.Random;
 
 /**
  * @author rkielty
- *
+ * Sample algorithm to find solutions for the Eight Queens Problem.
+ * Overides the   
  */
 public class BruteForceImpl implements Algorithm {
 
