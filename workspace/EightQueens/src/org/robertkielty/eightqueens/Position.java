@@ -10,27 +10,30 @@ public class Position {
 	public int getCol() {
 		return col;
 	}
-	public void setCol(int col) {
+	public void setCol(final int col) {
 		this.col = col;
 	}
 	public int getRow() {
 		return row;
 	}
-	public void setRow(int row) {
+	public void setRow(final int row) {
 		this.row = row;
 	}
 	public PositionStatus getStatus() {
 		return status;
 	}
-	public void setStatus(PositionStatus status) {
+	public void setStatus(final PositionStatus status) {
 		this.status = status;
 	}
-	int col;
-	int row;	
-	PositionStatus status;
-	public Position(int c,int r, PositionStatus status) {
-		setCol(c);
-		setRow(r);
-		setStatus(status);
+	private int col;
+	private int row;	
+	private PositionStatus status;
+	public Position(final int col,final int row, final PositionStatus status) {
+		this.col = col;
+		this.row = row;
+		this.status = status;
+	}
+	public Position() {
+		// do nothing
 	}
 }

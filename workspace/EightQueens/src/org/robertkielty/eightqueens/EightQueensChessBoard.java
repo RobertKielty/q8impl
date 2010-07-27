@@ -18,14 +18,17 @@ public class EightQueensChessBoard {
 	
 	private int count;					// Number of queens placed.
 	
-	/**
-	 * ctr
-	 */
-	public EightQueensChessBoard(int s) {
-		size = s;
+	public EightQueensChessBoard(final int gridSize) {
+		size = gridSize;
 		board = new PositionStatus[size][size];
 		count = 0;
-		clearTheBoard();
+
+		for(int i=0;i<size;i++){
+			for(int j=0;j<size;j++){
+				board[i][j]=PositionStatus.EMPTY;	
+			}
+		}
+		
 	}
 	
 	/**
@@ -34,22 +37,26 @@ public class EightQueensChessBoard {
 	 * @param row
 	 * @return true if the placement was successful 
 	 */
-	public Boolean placePiece(int col, int row){
+	public Boolean placePiece(final int col, final int row){
 
+		Boolean result;
+		
 		if(isPlaceable(col,row)){
 			board[col][row]=PositionStatus.OCCUPIED;
 			count++;
 			markAttackablePositions(col,row);
-			return true;
+			result = true;
+		} else {
+			result = false;
 		}
-		return false;
+		return result;
 	}
 	/**
 	 * Marks positions that are attackable from the position identified by (col,row) as taken.
 	 * @param col - The column position of the Queen : 0 >= col < size  
 	 * @param row - The row position of the Queen    : 0 >= row < size
 	 */
-	private void markAttackablePositions(int col, int row) {
+	private void markAttackablePositions(final int col, final int row) {
 		
 		assert(col>=0);
 		assert(col<size);
@@ -60,54 +67,54 @@ public class EightQueensChessBoard {
 		assert(board[col][row] == PositionStatus.OCCUPIED); // TODO : Good idea? Discuss at CR.
 		
 		// This column is now under attack
-		for (int y=0; y<size;y++) 
+		for (int y=0; y<size;y++) {
 			board[col][y] = PositionStatus.UNSAFE;
-
+		}
 		// This row is now under attack
-		for (int x=0; x < size; x++)
+		for (int x=0; x < size; x++) {
 			board[x][row] = PositionStatus.UNSAFE;
-
+		}
 		// Upper Right Diagonal : pre-increment x and y here?
-		for (int x=col,y=row; x<size && y<size ; x++,y++)
+		for (int x=col,y=row; x<size && y<size ; x++,y++){
 			board[x][y] = PositionStatus.UNSAFE;
-		
+		}
 		// Lower Right Diagonal
-		for (int x=col,y=row; x < size &&  y >= 0 ; x++,y--)
+		for (int x=col,y=row; x < size &&  y >= 0 ; x++,y--){
 			board[x][y] = PositionStatus.UNSAFE;
-		
+		}
 		// Upper Left Diagonal
-		for (int x=col,y=row; x >= 0 && y < size ; x--,y++)
+		for (int x=col,y=row; x >= 0 && y < size ; x--,y++){
 			board[x][y] = PositionStatus.UNSAFE;
-
+		}
 		// Lower Left Diagonal
-		for (int x=col,y=row; x >= 0 && y >= 0 ; x--,y--)
+		for (int x=col,y=row; x >= 0 && y >= 0 ; x--,y--){
 			board[x][y] = PositionStatus.UNSAFE;
-		
+		}
 		board[col][row] = PositionStatus.OCCUPIED;
 	}
 
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder("");
+		final StringBuilder boardState = new StringBuilder("");
 		for (int x=size-1; x >= 0; x--) {
 			for (int y=0; y < size; y++) {
 				switch (board[x][y]) {
 				case UNSAFE:
-					sb.append(" X ");
+					boardState.append(" X ");
 					break;
 				case OCCUPIED:
-					sb.append(" Q ");
+					boardState.append(" Q ");
 					break;
 				case EMPTY:
-					sb.append(" _ ");
+					boardState.append(" _ ");
 					break;
 				default:
 					break;
 				} 
 			}
-			sb.append('\n');
+			boardState.append('\n');
 		}
-		return sb.toString();
+		return boardState.toString();
 	}
 	/**
 	 * 
@@ -118,25 +125,27 @@ public class EightQueensChessBoard {
 	 *         false if a position is under attack from a queen or is not empty.
 	 *         
 	 */
-	private boolean isPlaceable(int col, int row) {
-
-		if (row < 0 || row >= size) 
+	private boolean isPlaceable(final int col, final int row) {
+		Boolean placeable;
+		if (row < 0 || row >= size) {
 			throw new IllegalArgumentException(
 					"isPlaceable : row " 
 					+ row + "parameter out of bounds, must be between 0  and " 
 					+ size);
-
-		if (col < 0 || col >= size) 
+		}
+		if (col < 0 || col >= size) { 
 			throw new IllegalArgumentException(
 					"isPlaceable : col " 
 					+ col + "parameter out of bounds, must be between 0  and " 
 					+ size);
-		
-		if (board[col][row] == PositionStatus.UNSAFE 
-				|| board[col][row] == PositionStatus.OCCUPIED)  
-			return false;
-		else 
-			return true;
+		}
+		if (board[col][row] == PositionStatus.UNSAFE  
+				|| board[col][row] == PositionStatus.OCCUPIED) {  
+			placeable = false;
+		} else { 
+			placeable = true;
+		}
+		return placeable;
 	}
 	/**
 	 * Removes all Queens from the Board.  
@@ -159,20 +168,28 @@ public class EightQueensChessBoard {
 	 * @return Position
 	 */
 	public Position getNextSafePosition() {
+		
+		final Position safePosition = new Position();
+		
+		outer:
 		for(int col=0; col < size; col++ ){
 			for(int row=0; row < size; row++ ){
-				if (board[col][row] == PositionStatus.EMPTY)
-					return new Position(col, row, board[col][row]);
+				if (board[col][row] == PositionStatus.EMPTY) {
+					safePosition.setCol(col);
+					safePosition.setRow(row);
+					safePosition.setStatus(PositionStatus.EMPTY);
+					break outer;
+				}
 			}
 		}
-		return null;
+		return safePosition;
 	}
 
 	public int getSize() {
 		return size;
 	}
 
-	public void setSize(int size) {
+	public void setSize(final int size) {
 		this.size = size;
 	}
 
@@ -180,16 +197,16 @@ public class EightQueensChessBoard {
 		return count;
 	}
 
-	public void setCount(int count) {
+	public void setCount(final int count) {
 		this.count = count;
 	}
 
-	public PositionStatus[][] getGrid() {
+	public PositionStatus[][] getBoard() {
 		return board;
 	}
 
-	public void setGrid(PositionStatus[][] grid) {
-		this.board = grid;
+	public void setBoard(final PositionStatus[][] board) {
+		this.board = board;
 	}
 
 }

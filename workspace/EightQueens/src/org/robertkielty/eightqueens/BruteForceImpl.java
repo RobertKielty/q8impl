@@ -8,21 +8,25 @@ import java.util.Random;
 /**
  * @author rkielty
  * Sample algorithm to find solutions for the Eight Queens Problem.
- * Overides the   
+ * 
  */
 public class BruteForceImpl implements Algorithm {
 
-	int [][]  starting_positions;
 	/* (non-Javadoc)
 	 * @see org.robertkielty.eightqueens.Algorithm#exucute(org.robertkielty.eightqueens.EightQueensChessBoard)
 	 */
 	@Override
-	public void execute(EightQueensChessBoard eqb) {
+	public void execute(final EightQueensChessBoard eqb) {
+		
 		Boolean solutionNotFound = true;
-		long startTime = System.currentTimeMillis();
+		
+		final long startTime = System.currentTimeMillis();
+		
 		long endTime = 0;
 		long duration;
+		
 		int iterations = 0;
+		
 		while(solutionNotFound) {
 			
 			iterations ++;
@@ -33,10 +37,12 @@ public class BruteForceImpl implements Algorithm {
 				endTime = System.currentTimeMillis();
 				solutionNotFound = false;
 			} else {
-				long lapTime = System.currentTimeMillis();
-				long iterationTime = startTime - lapTime;
+				final long lapTime = System.currentTimeMillis();
+				final long iterationTime = startTime - lapTime;
+				
 				System.out.println(eqb.getCount() +" queens in "+ iterationTime + "ms");
 				System.out.println(eqb.toString());
+				
 				eqb.clearTheBoard();
 			}
 			
@@ -49,22 +55,19 @@ public class BruteForceImpl implements Algorithm {
 		System.out.println(eqb.toString());
 	}
 
-	private void findSolution(EightQueensChessBoard eqb){
-		Random generator = new Random();
+	private void findSolution(final EightQueensChessBoard eqb){
+		final Random generator = new Random();
 
 		// Pick a starting position at random to place the first piece.
-		int col = generator.nextInt( eqb.getGridSize() );
-		int row = generator.nextInt( eqb.getGridSize() );
+		final int col = generator.nextInt( eqb.getGridSize() );
+		final int row = generator.nextInt( eqb.getGridSize() );
 		eqb.placePiece(col, row);
 
 		// Iterate over the safe positions and add queens when next safe position found
-		int i=0;
-		for (; i < eqb.getGridSize(); i++ ){
-			Position p = eqb.getNextSafePosition();
-			if (p == null)
-				break;
-			eqb.placePiece(p.getCol(), p.getRow());
-			p=null;
+		for (int i=0; i < eqb.getGridSize(); i++ ){
+			Position pos = eqb.getNextSafePosition();
+			eqb.placePiece(pos.getCol(), pos.getRow());
+			pos=null;
 		}
 	}
 }

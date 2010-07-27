@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="4.2.5" timestamp="2010-07-27T15:26:40.052">
+<file name="src/org/robertkielty/eightqueens/Application.java">
+<violation beginline="3" endline="22" begincolumn="0" endcolumn="0" rule="UseSingleton" ruleset="Design Rules" package="org.robertkielty.eightqueens" class="Application" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UseSingleton" priority="3">
+All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+</violation>
+</file>
+<file name="src/org/robertkielty/eightqueens/BruteForceImpl.java">
+<violation beginline="25" endline="37" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'endTime' (lines '25'-'37').
+</violation>
+<violation beginline="28" endline="32" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'iterations' (lines '28'-'32').
+</violation>
+<violation beginline="32" endline="32" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'iterations' (lines '32'-'32').
+</violation>
+<violation beginline="37" endline="37" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'endTime' (lines '37'-'37').
+</violation>
+<violation beginline="43" endline="43" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
+System.out.print is used
+</violation>
+<violation beginline="44" endline="44" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
+System.out.print is used
+</violation>
+<violation beginline="53" endline="53" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
+System.out.print is used
+</violation>
+<violation beginline="54" endline="54" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
+System.out.print is used
+</violation>
+<violation beginline="55" endline="55" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
+System.out.print is used
+</violation>
+<violation beginline="70" endline="70" begincolumn="0" endcolumn="0" rule="NullAssignment" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#NullAssignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="70" endline="68" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DD'-anomaly for variable 'pos' (lines '70'-'68').
+</violation>
+<violation beginline="70" endline="72" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+Found 'DU'-anomaly for variable 'pos' (lines '70'-'72').
+</violation>
+</file>
+<file name="src/org/robertkielty/eightqueens/EightQueensChessBoard.java">
+<violation beginline="205" endline="205" begincolumn="0" endcolumn="0" rule="MethodReturnsInternalArray" ruleset="Security Code Guidelines" package="org.robertkielty.eightqueens" class="EightQueensChessBoard" externalInfoUrl="http://pmd.sourceforge.net/rules/sunsecure.html#MethodReturnsInternalArray" priority="3">
+Returning 'board' may expose an internal array.
+</violation>
+<violation beginline="208" endline="208" begincolumn="0" endcolumn="0" rule="ArrayIsStoredDirectly" ruleset="Security Code Guidelines" package="org.robertkielty.eightqueens" class="EightQueensChessBoard" externalInfoUrl="http://pmd.sourceforge.net/rules/sunsecure.html#ArrayIsStoredDirectly" priority="3">
+The user-supplied array 'board' is stored directly.
+</violation>
+</file>
+<file name="src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java">
+<violation beginline="16" endline="16" begincolumn="0" endcolumn="0" rule="BeanMembersShouldSerialize" ruleset="JavaBean Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/javabeans.html#BeanMembersShouldSerialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="16" endline="16" begincolumn="0" endcolumn="0" rule="DefaultPackage" ruleset="Controversial Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DefaultPackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+<violation beginline="20" endline="20" begincolumn="0" endcolumn="0" rule="MethodArgumentCouldBeFinal" ruleset="Optimization Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'name' is not assigned and could be declared final
+</violation>
+<violation beginline="27" endline="29" begincolumn="0" endcolumn="0" rule="JUnit4TestShouldUseBeforeAnnotation" ruleset="Migration Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#JUnit4TestShouldUseBeforeAnnotation" priority="3">
+JUnit 4 tests that set up tests should use the @Before annotation
+</violation>
+<violation beginline="34" endline="36" begincolumn="0" endcolumn="0" rule="JUnit4TestShouldUseAfterAnnotation" ruleset="Migration Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#JUnit4TestShouldUseAfterAnnotation" priority="3">
+JUnit 4 tests that clean up tests should use the @After annotation
+</violation>
+<violation beginline="34" endline="36" begincolumn="0" endcolumn="0" rule="UselessOverridingMethod" ruleset="Basic Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/basic.html#UselessOverridingMethod" priority="3">
+Overriding method merely calls super
+</violation>
+<violation beginline="41" endline="45" begincolumn="0" endcolumn="0" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="42" endline="42" begincolumn="0" endcolumn="0" rule="JUnitAssertionsShouldIncludeMessage" ruleset="JUnit Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/junit.html#JUnitAssertionsShouldIncludeMessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="43" endline="43" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
+System.out.print is used
+</violation>
+<violation beginline="44" endline="44" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
+System.out.print is used
+</violation>
+<violation beginline="47" endline="64" begincolumn="0" endcolumn="0" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="49" endline="49" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
+System.out.print is used
+</violation>
+<violation beginline="52" endline="52" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
+System.out.print is used
+</violation>
+<violation beginline="54" endline="54" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
+System.out.print is used
+</violation>
+<violation beginline="56" endline="56" begincolumn="0" endcolumn="0" rule="JUnitAssertionsShouldIncludeMessage" ruleset="JUnit Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/junit.html#JUnitAssertionsShouldIncludeMessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="62" endline="62" begincolumn="0" endcolumn="0" rule="JUnitAssertionsShouldIncludeMessage" ruleset="JUnit Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/junit.html#JUnitAssertionsShouldIncludeMessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="66" endline="106" begincolumn="0" endcolumn="0" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="68" endline="68" begincolumn="0" endcolumn="0" rule="LocalVariableCouldBeFinal" ruleset="Optimization Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'gridSize' could be declared final
+</violation>
+<violation beginline="72" endline="72" begincolumn="0" endcolumn="0" rule="JUnitAssertionsShouldIncludeMessage" ruleset="JUnit Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/junit.html#JUnitAssertionsShouldIncludeMessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="73" endline="73" begincolumn="0" endcolumn="0" rule="JUnitAssertionsShouldIncludeMessage" ruleset="JUnit Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/junit.html#JUnitAssertionsShouldIncludeMessage" priority="3">
+JUnit assertions should include a message
+</violation>
+<violation beginline="73" endline="73" begincolumn="0" endcolumn="0" rule="UseAssertSameInsteadOfAssertTrue" ruleset="JUnit Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/junit.html#UseAssertSameInsteadOfAssertTrue" priority="3">
+Use assertSame(x, y) instead of assertTrue(x==y), or assertNotSame(x,y) vs assertFalse(x==y)
+</violation>
+<violation beginline="75" endline="76" begincolumn="0" endcolumn="0" rule="ForLoopsMustUseBraces" ruleset="Braces Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#ForLoopsMustUseBraces" priority="3">
+Avoid using for statements without curly braces
+</violation>
+<violation beginline="76" endline="76" begincolumn="0" endcolumn="0" rule="UseAssertSameInsteadOfAssertTrue" ruleset="JUnit Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/junit.html#UseAssertSameInsteadOfAssertTrue" priority="3">
+Use assertSame(x, y) instead of assertTrue(x==y), or assertNotSame(x,y) vs assertFalse(x==y)
+</violation>
+<violation beginline="78" endline="79" begincolumn="0" endcolumn="0" rule="ForLoopsMustUseBraces" ruleset="Braces Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#ForLoopsMustUseBraces" priority="3">
+Avoid using for statements without curly braces
+</violation>
+<violation beginline="79" endline="79" begincolumn="0" endcolumn="0" rule="UseAssertSameInsteadOfAssertTrue" ruleset="JUnit Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/junit.html#UseAssertSameInsteadOfAssertTrue" priority="3">
+Use assertSame(x, y) instead of assertTrue(x==y), or assertNotSame(x,y) vs assertFalse(x==y)
+</violation>
+<violation beginline="81" endline="82" begincolumn="0" endcolumn="0" rule="ForLoopsMustUseBraces" ruleset="Braces Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#ForLoopsMustUseBraces" priority="3">
+Avoid using for statements without curly braces
+</violation>
+<violation beginline="82" endline="82" begincolumn="0" endcolumn="0" rule="UseAssertSameInsteadOfAssertTrue" ruleset="JUnit Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/junit.html#UseAssertSameInsteadOfAssertTrue" priority="3">
+Use assertSame(x, y) instead of assertTrue(x==y), or assertNotSame(x,y) vs assertFalse(x==y)
+</violation>
+<violation beginline="87" endline="87" begincolumn="0" endcolumn="0" rule="UseAssertSameInsteadOfAssertTrue" ruleset="JUnit Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/junit.html#UseAssertSameInsteadOfAssertTrue" priority="3">
+Use assertSame(x, y) instead of assertTrue(x==y), or assertNotSame(x,y) vs assertFalse(x==y)
+</violation>
+<violation beginline="89" endline="90" begincolumn="0" endcolumn="0" rule="ForLoopsMustUseBraces" ruleset="Braces Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#ForLoopsMustUseBraces" priority="3">
+Avoid using for statements without curly braces
+</violation>
+<violation beginline="92" endline="93" begincolumn="0" endcolumn="0" rule="ForLoopsMustUseBraces" ruleset="Braces Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/braces.html#ForLoopsMustUseBraces" priority="3">
+Avoid using for statements without curly braces
+</violation>
+<violation beginline="108" endline="130" begincolumn="0" endcolumn="0" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="109" endline="109" begincolumn="0" endcolumn="0" rule="LocalVariableCouldBeFinal" ruleset="Optimization Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'gridSize' could be declared final
+</violation>
+<violation beginline="113" endline="113" begincolumn="0" endcolumn="0" rule="UnnecessaryBooleanAssertion" ruleset="JUnit Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/junit.html#UnnecessaryBooleanAssertion" priority="3">
+assertTrue(true) or similar statements are unnecessary
+</violation>
+<violation beginline="118" endline="118" begincolumn="0" endcolumn="0" rule="UnnecessaryBooleanAssertion" ruleset="JUnit Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/junit.html#UnnecessaryBooleanAssertion" priority="3">
+assertTrue(true) or similar statements are unnecessary
+</violation>
+<violation beginline="123" endline="123" begincolumn="0" endcolumn="0" rule="UnnecessaryBooleanAssertion" ruleset="JUnit Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/junit.html#UnnecessaryBooleanAssertion" priority="3">
+assertTrue(true) or similar statements are unnecessary
+</violation>
+<violation beginline="128" endline="128" begincolumn="0" endcolumn="0" rule="UnnecessaryBooleanAssertion" ruleset="JUnit Rules" package="org.robertkielty.eightqueens.test" class="EightQueensChessBoardTest" externalInfoUrl="http://pmd.sourceforge.net/rules/junit.html#UnnecessaryBooleanAssertion" priority="3">
+assertTrue(true) or similar statements are unnecessary
+</violation>
+</file>
+</pmd>

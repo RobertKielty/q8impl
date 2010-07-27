@@ -5,12 +5,12 @@ public class Application {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		// Goal to  place 8 queens on  this chess board so that al are safe. 
-		EightQueensChessBoard eqb = new EightQueensChessBoard(getBoardSize());
+		final EightQueensChessBoard eqb = new EightQueensChessBoard(getBoardSize());
 		
 		// TODO : Could use DI to inject an algorithm here.
-		BruteForceImpl bfAlgorithm = new BruteForceImpl();
+		final BruteForceImpl bfAlgorithm = new BruteForceImpl();
 		bfAlgorithm.execute(eqb);
 	}
 
