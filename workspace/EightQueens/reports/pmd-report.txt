@@ -1,49 +1,39 @@
 
-src/org/robertkielty/eightqueens/Application.java:3	All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
-src/org/robertkielty/eightqueens/BruteForceImpl.java:29	Found 'DD'-anomaly for variable 'endTime' (lines '25'-'37').
-src/org/robertkielty/eightqueens/BruteForceImpl.java:32	Found 'DD'-anomaly for variable 'iterations' (lines '28'-'32').
-src/org/robertkielty/eightqueens/BruteForceImpl.java:36	Found 'DD'-anomaly for variable 'iterations' (lines '32'-'32').
-src/org/robertkielty/eightqueens/BruteForceImpl.java:41	Found 'DD'-anomaly for variable 'endTime' (lines '37'-'37').
-src/org/robertkielty/eightqueens/BruteForceImpl.java:47	System.out.print is used
-src/org/robertkielty/eightqueens/BruteForceImpl.java:60	System.out.print is used
-src/org/robertkielty/eightqueens/BruteForceImpl.java:77	Assigning an Object to null is a code smell.  Consider refactoring.
-src/org/robertkielty/eightqueens/BruteForceImpl.java:77	Found 'DD'-anomaly for variable 'pos' (lines '70'-'68').
-src/org/robertkielty/eightqueens/BruteForceImpl.java:77	Found 'DU'-anomaly for variable 'pos' (lines '70'-'72').
+src/org/robertkielty/eightqueens/Application.java:9	All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/org/robertkielty/eightqueens/Application.java:22	Found 'DU'-anomaly for variable 'solOutput' (lines '22'-'25').
+src/org/robertkielty/eightqueens/BruteForceImpl.java:30	Avoid unused local variables such as 'iterations'.
+src/org/robertkielty/eightqueens/BruteForceImpl.java:30	Found 'DD'-anomaly for variable 'iterations' (lines '30'-'34').
+src/org/robertkielty/eightqueens/BruteForceImpl.java:30	Found 'DU'-anomaly for variable 'iterations' (lines '30'-'60').
+src/org/robertkielty/eightqueens/BruteForceImpl.java:34	Found 'DD'-anomaly for variable 'iterations' (lines '34'-'34').
+src/org/robertkielty/eightqueens/BruteForceImpl.java:34	Found 'DU'-anomaly for variable 'iterations' (lines '34'-'60').
+src/org/robertkielty/eightqueens/BruteForceImpl.java:39	Found 'DD'-anomaly for variable 'endTime' (lines '39'-'39').
+src/org/robertkielty/eightqueens/BruteForceImpl.java:45	Avoid instantiating new objects inside loops
+src/org/robertkielty/eightqueens/BruteForceImpl.java:75	Assigning an Object to null is a code smell.  Consider refactoring.
+src/org/robertkielty/eightqueens/BruteForceImpl.java:75	Found 'DD'-anomaly for variable 'pos' (lines '75'-'73').
+src/org/robertkielty/eightqueens/BruteForceImpl.java:75	Found 'DU'-anomaly for variable 'pos' (lines '75'-'77').
+src/org/robertkielty/eightqueens/BruteForceImpl.java:92	Assigning an Object to null is a code smell.  Consider refactoring.
 src/org/robertkielty/eightqueens/EightQueensChessBoard.java:205	Returning 'board' may expose an internal array.
 src/org/robertkielty/eightqueens/EightQueensChessBoard.java:208	The user-supplied array 'board' is stored directly.
 src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:16	Found non-transient, non-static member. Please mark as transient or provide accessors.
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:16	Use explicit scoping instead of the default package private level
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:20	Parameter 'name' is not assigned and could be declared final
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:27	JUnit 4 tests that set up tests should use the @Before annotation
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:34	JUnit 4 tests that clean up tests should use the @After annotation
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:34	Overriding method merely calls super
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:41	JUnit 4 tests that execute tests should use the @Test annotation
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:42	JUnit assertions should include a message
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:43	System.out.print is used
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:44	System.out.print is used
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:47	JUnit 4 tests that execute tests should use the @Test annotation
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:49	System.out.print is used
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:52	System.out.print is used
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:54	System.out.print is used
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:56	JUnit assertions should include a message
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:30	JUnit 4 tests that set up tests should use the @Before annotation
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:40	JUnit 4 tests that clean up tests should use the @After annotation
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:41	Overriding method merely calls super
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:50	JUnit 4 tests that execute tests should use the @Test annotation
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:51	JUnit assertions should include a message
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:54	JUnit 4 tests that execute tests should use the @Test annotation
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:58	JUnit assertions should include a message
 src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:62	JUnit assertions should include a message
 src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:66	JUnit 4 tests that execute tests should use the @Test annotation
 src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:68	Local variable 'gridSize' could be declared final
 src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:72	JUnit assertions should include a message
 src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:73	JUnit assertions should include a message
 src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:73	Use assertSame(x, y) instead of assertTrue(x==y), or assertNotSame(x,y) vs assertFalse(x==y)
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:75	Avoid using for statements without curly braces
 src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:76	Use assertSame(x, y) instead of assertTrue(x==y), or assertNotSame(x,y) vs assertFalse(x==y)
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:78	Avoid using for statements without curly braces
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:79	Use assertSame(x, y) instead of assertTrue(x==y), or assertNotSame(x,y) vs assertFalse(x==y)
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:81	Avoid using for statements without curly braces
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:82	Use assertSame(x, y) instead of assertTrue(x==y), or assertNotSame(x,y) vs assertFalse(x==y)
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:87	Use assertSame(x, y) instead of assertTrue(x==y), or assertNotSame(x,y) vs assertFalse(x==y)
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:89	Avoid using for statements without curly braces
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:92	Avoid using for statements without curly braces
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:108	JUnit 4 tests that execute tests should use the @Test annotation
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:109	Local variable 'gridSize' could be declared final
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:113	assertTrue(true) or similar statements are unnecessary
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:118	assertTrue(true) or similar statements are unnecessary
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:123	assertTrue(true) or similar statements are unnecessary
-src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:128	assertTrue(true) or similar statements are unnecessary
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:80	Use assertSame(x, y) instead of assertTrue(x==y), or assertNotSame(x,y) vs assertFalse(x==y)
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:84	Use assertSame(x, y) instead of assertTrue(x==y), or assertNotSame(x,y) vs assertFalse(x==y)
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:90	Use assertSame(x, y) instead of assertTrue(x==y), or assertNotSame(x,y) vs assertFalse(x==y)
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:114	JUnit 4 tests that execute tests should use the @Test annotation
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:119	assertTrue(true) or similar statements are unnecessary
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:124	assertTrue(true) or similar statements are unnecessary
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:129	assertTrue(true) or similar statements are unnecessary
+src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:134	assertTrue(true) or similar statements are unnecessary

@@ -23,7 +23,7 @@ public class ConsoleDisplay implements Observer, SolutionDisplay {
 					+ solution.getQueensPlaced() 
 					+ " queens placed." );	
 		}
-		System.out.println("Elapsed time  : " + solution.getTimeTaken());
+		System.out.println("Elapsed time  : " + solution.getTimeTaken() +"ms");
 		System.out.println(solution.getBoardString()); // NOPMD by rkielty on 28/07/10 02:36
 	}
 

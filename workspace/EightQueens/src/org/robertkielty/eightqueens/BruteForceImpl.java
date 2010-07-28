@@ -27,20 +27,20 @@ public class BruteForceImpl implements Algorithm, Subject {
 		long endTime = 0; // NOPMD by rkielty on 28/07/10 00:19
 		long duration;
 		
-		int iterations = 0;
 		
 		while(solutionNotFound) {
 			
-			iterations ++;
-
 			findSolution(eqb);
 			
 			if (eqb.getCount()==eqb.getGridSize()){
+				
 				endTime = System.currentTimeMillis();
 				solutionNotFound = false;
+				
 			} else {
+				
 				final long lapTime = System.currentTimeMillis();
-				final long iterationTime = startTime - lapTime;
+				final long iterationTime = lapTime - startTime ;
 				
 				Solution partial = new Solution(eqb.toString(), eqb.getCount() , iterationTime);
 
@@ -53,7 +53,7 @@ public class BruteForceImpl implements Algorithm, Subject {
 			
 		}
 		
-		duration = startTime - endTime;
+		duration = endTime - startTime;
 		
 		final Solution fullSolution = new Solution(eqb.toString(), eqb.getCount() , duration);
 		notifyObserver(fullSolution);
