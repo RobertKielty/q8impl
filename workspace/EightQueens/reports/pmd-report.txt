@@ -1,17 +1,14 @@
 
 src/org/robertkielty/eightqueens/Application.java:3	All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
-src/org/robertkielty/eightqueens/BruteForceImpl.java:25	Found 'DD'-anomaly for variable 'endTime' (lines '25'-'37').
-src/org/robertkielty/eightqueens/BruteForceImpl.java:28	Found 'DD'-anomaly for variable 'iterations' (lines '28'-'32').
-src/org/robertkielty/eightqueens/BruteForceImpl.java:32	Found 'DD'-anomaly for variable 'iterations' (lines '32'-'32').
-src/org/robertkielty/eightqueens/BruteForceImpl.java:37	Found 'DD'-anomaly for variable 'endTime' (lines '37'-'37').
-src/org/robertkielty/eightqueens/BruteForceImpl.java:43	System.out.print is used
-src/org/robertkielty/eightqueens/BruteForceImpl.java:44	System.out.print is used
-src/org/robertkielty/eightqueens/BruteForceImpl.java:53	System.out.print is used
-src/org/robertkielty/eightqueens/BruteForceImpl.java:54	System.out.print is used
-src/org/robertkielty/eightqueens/BruteForceImpl.java:55	System.out.print is used
-src/org/robertkielty/eightqueens/BruteForceImpl.java:70	Assigning an Object to null is a code smell.  Consider refactoring.
-src/org/robertkielty/eightqueens/BruteForceImpl.java:70	Found 'DD'-anomaly for variable 'pos' (lines '70'-'68').
-src/org/robertkielty/eightqueens/BruteForceImpl.java:70	Found 'DU'-anomaly for variable 'pos' (lines '70'-'72').
+src/org/robertkielty/eightqueens/BruteForceImpl.java:29	Found 'DD'-anomaly for variable 'endTime' (lines '25'-'37').
+src/org/robertkielty/eightqueens/BruteForceImpl.java:32	Found 'DD'-anomaly for variable 'iterations' (lines '28'-'32').
+src/org/robertkielty/eightqueens/BruteForceImpl.java:36	Found 'DD'-anomaly for variable 'iterations' (lines '32'-'32').
+src/org/robertkielty/eightqueens/BruteForceImpl.java:41	Found 'DD'-anomaly for variable 'endTime' (lines '37'-'37').
+src/org/robertkielty/eightqueens/BruteForceImpl.java:47	System.out.print is used
+src/org/robertkielty/eightqueens/BruteForceImpl.java:60	System.out.print is used
+src/org/robertkielty/eightqueens/BruteForceImpl.java:77	Assigning an Object to null is a code smell.  Consider refactoring.
+src/org/robertkielty/eightqueens/BruteForceImpl.java:77	Found 'DD'-anomaly for variable 'pos' (lines '70'-'68').
+src/org/robertkielty/eightqueens/BruteForceImpl.java:77	Found 'DU'-anomaly for variable 'pos' (lines '70'-'72').
 src/org/robertkielty/eightqueens/EightQueensChessBoard.java:205	Returning 'board' may expose an internal array.
 src/org/robertkielty/eightqueens/EightQueensChessBoard.java:208	The user-supplied array 'board' is stored directly.
 src/org/robertkielty/eightqueens/test/EightQueensChessBoardTest.java:16	Found non-transient, non-static member. Please mark as transient or provide accessors.

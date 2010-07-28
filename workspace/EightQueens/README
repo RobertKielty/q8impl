@@ -1,0 +1,13 @@
+Written using Eclipse, managed on a local Git repository, I implemented tests using JUnit3 as I designed the code yesterday.
+
+This morning I added more tests and then ran a code checker called PMD across the code to improve its quality. I have implemented a lot of its recommendations on the non-test code.
+
+PMD has highlighted one breach of encapsulation within the EightQueensChessBoard class which I would seek to address if this were code headed for a production environment.
+
+There are also other design issues that I would be happy to discuss if I get to do a face to face with NewBay.
+
+Let me know if you have any problems viewing the code.
+
+I really enjoyed working on this task and I'm keen to work with NewBay.
+
+This is possibly the best interview process that I have undertaken.

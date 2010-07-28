@@ -7,11 +7,13 @@ import java.util.Random;
 
 /**
  * @author rkielty
+
  * Sample algorithm to find solutions for the Eight Queens Problem.
  * 
  */
-public class BruteForceImpl implements Algorithm {
+public class BruteForceImpl implements Algorithm, Subject {
 
+	transient private Observer obs;
 	/* (non-Javadoc)
 	 * @see org.robertkielty.eightqueens.Algorithm#exucute(org.robertkielty.eightqueens.EightQueensChessBoard)
 	 */
@@ -22,7 +24,7 @@ public class BruteForceImpl implements Algorithm {
 		
 		final long startTime = System.currentTimeMillis();
 		
-		long endTime = 0;
+		long endTime = 0; // NOPMD by rkielty on 28/07/10 00:19
 		long duration;
 		
 		int iterations = 0;
@@ -40,20 +42,23 @@ public class BruteForceImpl implements Algorithm {
 				final long lapTime = System.currentTimeMillis();
 				final long iterationTime = startTime - lapTime;
 				
-				System.out.println(eqb.getCount() +" queens in "+ iterationTime + "ms");
-				System.out.println(eqb.toString());
+				Solution partial = new Solution(eqb.toString(), eqb.getCount() , iterationTime);
+
+				notifyObserver(partial);
 				
 				eqb.clearTheBoard();
+				
+				partial = null; // NOPMD by rkielty on 28/07/10 00:17
 			}
 			
 		}
 		
 		duration = startTime - endTime;
 		
-		System.out.println("Found the following solution in " + duration + "ms");
-		System.out.println("using " + iterations + " attempts");
-		System.out.println(eqb.toString());
+		final Solution fullSolution = new Solution(eqb.toString(), eqb.getCount() , duration);
+		notifyObserver(fullSolution);
 	}
+
 
 	private void findSolution(final EightQueensChessBoard eqb){
 		final Random generator = new Random();
@@ -70,4 +75,21 @@ public class BruteForceImpl implements Algorithm {
 			pos=null;
 		}
 	}
+
+	@Override
+	public void registerObserver(final Observer obs) {
+		// TODO Auto-generated method stub
+		this.obs = obs;
+	}
+
+	@Override
+	public void notifyObserver(final Solution solution) {
+		obs.update(solution);
+	}
+
+	@Override
+	public void removeObserver(final Observer observer) {
+		obs=null;
+	}
+	
 }

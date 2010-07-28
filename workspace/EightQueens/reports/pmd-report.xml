@@ -1,45 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd version="4.2.5" timestamp="2010-07-27T15:26:40.052">
+<pmd version="4.2.5" timestamp="2010-07-28T00:14:38.435">
 <file name="src/org/robertkielty/eightqueens/Application.java">
 <violation beginline="3" endline="22" begincolumn="0" endcolumn="0" rule="UseSingleton" ruleset="Design Rules" package="org.robertkielty.eightqueens" class="Application" externalInfoUrl="http://pmd.sourceforge.net/rules/design.html#UseSingleton" priority="3">
 All methods are static.  Consider using Singleton instead.  Alternatively, you could add a private constructor or make the class abstract to silence this warning.
 </violation>
 </file>
 <file name="src/org/robertkielty/eightqueens/BruteForceImpl.java">
-<violation beginline="25" endline="37" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+<violation beginline="29" endline="37" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
 Found 'DD'-anomaly for variable 'endTime' (lines '25'-'37').
 </violation>
-<violation beginline="28" endline="32" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+<violation beginline="32" endline="32" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
 Found 'DD'-anomaly for variable 'iterations' (lines '28'-'32').
 </violation>
-<violation beginline="32" endline="32" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+<violation beginline="36" endline="32" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
 Found 'DD'-anomaly for variable 'iterations' (lines '32'-'32').
 </violation>
-<violation beginline="37" endline="37" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+<violation beginline="41" endline="37" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
 Found 'DD'-anomaly for variable 'endTime' (lines '37'-'37').
 </violation>
-<violation beginline="43" endline="43" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
+<violation beginline="47" endline="43" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
 System.out.print is used
 </violation>
-<violation beginline="44" endline="44" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
+<violation beginline="60" endline="53" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
 System.out.print is used
 </violation>
-<violation beginline="53" endline="53" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
-System.out.print is used
-</violation>
-<violation beginline="54" endline="54" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
-System.out.print is used
-</violation>
-<violation beginline="55" endline="55" begincolumn="0" endcolumn="0" rule="SystemPrintln" ruleset="Java Logging Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/logging-java.html#SystemPrintln" priority="2">
-System.out.print is used
-</violation>
-<violation beginline="70" endline="70" begincolumn="0" endcolumn="0" rule="NullAssignment" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#NullAssignment" priority="3">
+<violation beginline="77" endline="70" begincolumn="0" endcolumn="0" rule="NullAssignment" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#NullAssignment" priority="3">
 Assigning an Object to null is a code smell.  Consider refactoring.
 </violation>
-<violation beginline="70" endline="68" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+<violation beginline="77" endline="68" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
 Found 'DD'-anomaly for variable 'pos' (lines '70'-'68').
 </violation>
-<violation beginline="70" endline="72" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
+<violation beginline="77" endline="72" begincolumn="0" endcolumn="0" rule="DataflowAnomalyAnalysis" ruleset="Controversial Rules" package="org.robertkielty.eightqueens" class="BruteForceImpl" externalInfoUrl="http://pmd.sourceforge.net/rules/controversial.html#DataflowAnomalyAnalysis" priority="5">
 Found 'DU'-anomaly for variable 'pos' (lines '70'-'72').
 </violation>
 </file>
